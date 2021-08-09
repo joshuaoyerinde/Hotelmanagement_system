@@ -1,0 +1,95 @@
+
+<div class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    <br> Iusto earum necessitatibus aut sed tempore quam. Temporibus excepturi veritatis, odio illum, 
+    <br> 
+</div>
+<div class="container p-3 mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <mat-card class="mat-card">
+                <div class="text-center logo mr-auto">
+                    <h1 class="text-light"><a href="index.html">  <span>D<img src="../../assets/pics/lg.png" width="35px"  alt="">lux </span></a></h1>
+                </div>
+                <mat-card-content>
+                    <form [formGroup]="formregistration" (ngSubmit)="submitusers()">
+                        <div class="row justify-content-center mx-auto mt-3">
+                            <div class="col-md-6">
+                                <mat-form-field class="input-full-width" color="accent">
+                                    <mat-label>
+                                        <i class="fa fa-user text-warning" aria-hidden="true"></i>
+                                        Fullname
+                                    </mat-label>
+                                    <input  type="text" formControlName="fullname"  matInput placeholder="fullName" required>
+                                    <mat-error *ngIf="userfullname.invalid">
+                                          <span>input <strong>required</strong> </span>                                          
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field class="input-full-width" color="accent">
+                                    <mat-label>
+                                        <i class="fa fa-phone-square text-warning" aria-hidden="true"></i>
+                                        Phone
+                                    </mat-label>
+                                    <!-- <span matPrefix>+234 &nbsp;</span> -->
+                                    <input  type="text" formControlName="phone" matInput placeholder="Phone">
+                                    <mat-error *ngIf="userphone.invalid && userphone.invalid">
+                                        <span>phone number is  <strong>required</strong> </span>                                          
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <mat-form-field class="input-full-width" color="accent">
+                                    <mat-label>
+                                        <i class="fa fa-address-card text-warning" aria-hidden="true"></i>
+                                        Address
+                                    </mat-label>
+                                    <input  type="text" formControlName="adderess" matInput placeholder="Adderess">
+                                    <mat-error *ngIf="useradd.invalid && useradd.invalid">
+                                        <span>Address is  required </span>                                          
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <mat-form-field class="input-full-width" color="accent">
+                                    <mat-label>
+                                        <mat-icon class="mat-icon" aria-hidden="false" aria-label="Example home icon" color="accent">email</mat-icon>
+                                        Email
+                                    </mat-label>
+                                    <input  type="text" formControlName="email" matInput placeholder="Email" required>
+                                    <mat-error *ngIf="useremail.invalid">
+                                        <span class="txt-warn" *ngIf="useremail.errors.required">
+                                            please email is <strong>required</strong>                                         
+                                        </span>
+                                        <span *ngIf="useremail.errors.email">
+                                            Please enter a valid email <strong>address</strong> 
+                                        </span>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <mat-form-field class="input-full-width" color="accent">
+                                    <mat-label>
+                                        <mat-icon class="mat-icon" aria-hidden="false" aria-label="Example home icon" color="accent">no_encryption</mat-icon>
+                                        password
+                                    </mat-label>
+                                    <input  type="text" formControlName="password" matInput placeholder="password">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <mat-card-actions>
+                            <div class="ml-5 mt-3">
+                                <button [disabled]="formregistration.invalid" mat-flat-button class="text-white btn-sign w-25"><div *ngIf="signuptext">Sign up</div><span *ngIf="spina" class="h2 fa fa-spinner fa-spin" aria-hidden="true"></span></button>
+                            </div>
+                        </mat-card-actions>
+                    </form>
+                </mat-card-content>
+                <div class="absolute bottom-0 w-full p-4 text-center text-xs rounded-md text-gray-400">
+                    <a routerLink="./" class="ml-5 text-dark mr-5 mb-1 transition">(c) Hotel 2020</a>
+                    <a routerLink="/loginpage" class="ml-5 text-dark  mr-5 mb-1 ">Already have account ? Sign in</a>
+                    <!-- <a routerLink="./" class="ml-5 mr-5 mb-1 inline-block hover:text-gray-600 transition duration-200">Terms and Condit ion</a> -->
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

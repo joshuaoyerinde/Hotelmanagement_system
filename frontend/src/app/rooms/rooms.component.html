@@ -1,0 +1,44 @@
+<p class="text-light">rooms works!</p>
+<p class="text-light">rooms works!</p>
+<div class="container con">
+    <!-- <ng-container *ngComponentOutlet=""></ng-container> -->
+    <div class="row mt-5 justify-content-center mx-auto child">
+        <div class="col-md-6 col-lg-6 d-lg-block d-none">
+            <div class="card-body inner box-check ">
+                <a data-fancybox="gallery" href="../../assets/pics/ht2.png"  data-gall="inner">
+                    <img src="../../assets/pics/ht2.png" class="img-fluid" width="480" height="345" alt="">
+                </a>
+               <div class="room-disc">ojafoo maiores dolorum ojafoo maiores dolorum <strong> ipsa autem</strong> voluptatem sfsf Lorem ipsum dolor, sit ame</div> 
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+            <div class="text-center logo mt-3">
+                <h1 class="text-light"><a href="" routerLink="/">  <span>D<img src="../../assets/pics/lg.png" width="35px"  alt="">lux </span></a></h1>
+            </div>
+            <div class="card-body box-check  my-5">
+                <form class="example-form" [formGroup]="dateBookForm" (ngSubmit)="bookDate()">
+                    <mat-form-field appearance="fill" class="example-full-width">
+                        <mat-label>Check-out</mat-label>
+                        <input matInput [matDatepicker]="picker1"  formControlName="checkin" required>
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                    </mat-form-field> 
+                    <div class="mt-4">
+                        <mat-form-field appearance="fill" class="example-full-width">
+                            <mat-label>Check-out</mat-label>
+                            <input matInput [matDatepicker]="picker2" formControlName="checkout" required>
+                            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                            <mat-datepicker #picker2></mat-datepicker>
+                        </mat-form-field>  
+                    </div>
+                    <div class="text-center">
+                        <button mat-flat-button class="text-white col-4 mt-4" style="background-color: #ffb30b">Book </button>
+                    </div>
+                </form>
+                <!-- <button (click)="add()">Add</button> -->
+                <!-- <img src="../../assets/pics/ht2.png" class="img-fluid" width="480" height="345" alt=""> -->
+            </div>
+           
+        </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<!-- <p>staffs-dialog works!</p> -->
+<h2 mat-dialog-title>Staff Details</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>Develop across all platforms{{info.staff_id}}</h3>
+  <div class="row justify-content-center mx-auto p-2">
+      <div class="col-lg-4 col-md-4 col-sm-4 text-center mb mx-auto">
+        <!-- <div class="card border-0 shadow-sm"> -->
+          <!-- <div class="card-body"> -->
+            <div class="">
+              <img src="../../assets/pics/ht2.png" class="rounded-circle" width="200" height="200">
+              <p class=""><b>{{info.first_name}} &nbsp;{{info.last_name}}</b></p>
+            </div>
+          <!-- </div> -->
+        <!-- </div> -->
+      </div>
+      <div class="col-md-8 col-lg-8 ">
+        <form [formGroup]="formEditStaff">
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field class="input-full-width" appearance="fill">
+                <mat-label>First Name</mat-label>
+                <input  matInput formControlName="firstname" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field class="input-full-width" appearance="fill">
+                <mat-label>Last Name</mat-label>
+                <input type="text" matInput formControlName="lastname" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field class="input-full-width" appearance="fill">
+                <mat-label>Phone</mat-label>
+                <input type="text" matInput formControlName="phone" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field class="input-full-width" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input type="text" matInput formControlName="email" required>
+              </mat-form-field>
+            </div>
+            <!-- /col -->
+            <div class="col-md-6">
+              <mat-form-field class="input-full-width" appearance="fill">
+                <mat-label>Role</mat-label>
+                <input type="text" matInput formControlName="role" required>
+              </mat-form-field>
+            </div>
+            <!-- /col -->
+            <div class="col-md-6">
+              <mat-form-field class="input-full-width" appearance="fill">
+                <mat-label>Address</mat-label>
+                <input type="text" matInput formControlName="address" required>
+              </mat-form-field>
+            </div>
+            <div>We serve you with maximum and best relaxation</div>
+          </div>
+          <!-- /row -->
+          <mat-slide-toggle  (click)="editDetails()" class="float-right">Edit staff!</mat-slide-toggle>
+          <!-- <button mat-fab color="primary" class="float-right" (click)="editDetails()"><i class="fa fa-edit"></i> </button> -->
+
+        </form>
+    </div>
+  </div>
+ 
+</mat-dialog-content>
+<mat-dialog-actions align="end"> 
+  <div class="mb-3">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button mat-dialog-close=[true] (click)="updateStaffDetails()" cdkFocusInitial>Update</button>
+  </div>
+</mat-dialog-actions>

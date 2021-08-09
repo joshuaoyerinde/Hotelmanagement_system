@@ -1,0 +1,70 @@
+<!-- <p>view-roomsdetails works!</p> -->
+<div class="container-fluid">
+    <div class="mt-3">
+        <div class="add ml-2"> <i class="fa fa-angle-right"></i>Rooms Details</div>
+    </div>
+    <!-- <div class="clearfix"> -->
+        <div class="clearfix">
+            <div class="col-md-4 float-right ">
+                <mat-form-field class="float-right full-width">
+                    <mat-label>Search</mat-label>
+                    <input type="text" placeholder="Search" matInput>
+                </mat-form-field>
+            </div>
+                   </div>
+    <!-- </div> -->
+        <section class="main-content mt-5">
+            <section class="wrapper">
+                <div class="content-panel mt-n2">
+                    <div class="table-responsive">
+                        <table class="table table-borderless table-hover">
+                            <!-- <hr> -->
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Room Number</th>
+                                    <th>Room Type</th>
+                                    <th>Price</th>
+                                    <th>Room Condition</th>
+                                    <!-- <th>Email</th> -->
+                                    <th>status</th>
+                                    <th>Edit</th>
+                                    <th>Drop</th>
+                                </tr>
+                            </thead><br>
+                          
+                            <tbody class="mt-3">
+                                <tr *ngFor="let details of arrayOfRooms let i = index"  class="card-body tr-shadow mt-3 border-0">
+                                    <td>{{i+1}}</td>
+                                    <td>{{details.room_numner}}</td>
+                                    <td>{{details.room_type.toUpperCase()}}</td>
+                                    <td><div style="color: #ffb03b; font-weight: 600;">${{details.price}}</div></td>
+                                    <td>{{details.room_condition.toUpperCase()}}</td>
+                                    <!-- <td>{{details.room_numner}}</td> -->
+                                    <td>
+                                        <div *ngIf="condition">
+                                            {{condition}}
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button  mat-mini-fab color="accent" aria-label="Example icon button with a bookmark icon" (click)="viewRoomDetails(details)">
+                                            <!-- <mat-icon>bookmark</mat-icon> -->
+                                            <i class="fa fa-eye text-white"></i>
+                                        </button> 
+                                    </td>
+                                    <td>
+                                        <button mat-mini-fab color="accent" aria-label="Example icon button with a bookmark icon" (click)="dropRoomDetails(details.rooms_id)">
+                                            <mat-icon class="text-white">delete</mat-icon>
+                                            <!-- <i class="fa fa- text-white"></i> -->
+                                        </button>
+                                    </td>
+                                </tr>
+                                <!-- </div> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /content-panel -->
+            </section>
+        </section>
+</div>

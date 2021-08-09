@@ -1,0 +1,80 @@
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Satisfy", sans-serif;
+}
+span{
+  font-family: "Satisfy", sans-serif;
+  font-size: 20px;
+  color: #ffb03b;
+}
+.nav-item,a{
+  /* color: #ffb03b; */
+  color: black;
+  font-family:  "Poppins", sans-serif;
+  font-size: 15px;
+}
+.nav-item:hover{
+  border: 0.01px solid #ffb03b !important;
+}
+/* for nav gallery */
+/* nav gallery end here */
+.gallery{
+    font-family: "Satisfy", sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+.line{
+    border-bottom:4px solid #ffb03b;
+    height: 5px;
+    background-color: #ffb03b;
+    /* text-align: center; */
+    /* width: 40px; */
+}
+/* Gallery Configuration */
+.photo-wrapper {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background-color: #4ECDC4;
+    -webkit-transition: background-color 0.4s;
+    -moz-transition: background-color 0.4s;
+    -o-transition: background-color 0.4s;
+    transition: background-color 0.4s;
+  }
+  .project .overlay {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+  
+  }
+  
+  .project:hover .photo-wrapper {
+    background-color: #ffb13b94;
+      background-image:url(../../assets/pics/zoom.png);
+      background-repeat:no-repeat;
+      background-position:center;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: relative;
+  }
+  .project:hover .photo {
+    opacity: 10;
+    filter: alpha(opacity=4000);
+    opacity: 0.1;
+    filter: alpha(opacity=40);
+  }
+  .project:hover .overlay {
+    opacity: 100;
+    filter: alpha(opacity=10000);
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  

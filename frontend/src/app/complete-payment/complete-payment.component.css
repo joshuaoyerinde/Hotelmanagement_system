@@ -1,0 +1,11 @@
+.payment-btn{
+    border: none;
+    box-shadow: 2px 3px 4px black;
+    padding: 8px 8px 9px;
+    background-color: #D04141;
+    color: white;
+    outline: none;
+}
+.payment-btn:hover{
+    background-color: brown;
+}

@@ -1,0 +1,24 @@
+.set-top{
+    margin-top: -200px;
+}
+@media (max-width:1024px){
+    .set-top{
+        margin-top: -30px;
+        background-color: red;
+    }
+}
+/* satffs  styles*/
+#tol-style{
+    font-size: 15px !important;
+    color: rgb(121, 118, 118);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.text-icon{
+    font-size: 35px;
+    color: #ffb30f;
+}
+.myCanvas{
+    display: block;
+    max-width: 620px;
+    height: 420px;
+}

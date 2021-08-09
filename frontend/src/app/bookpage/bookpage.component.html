@@ -1,0 +1,67 @@
+<!-- <nav aria-label="breadcrumb" class="nav-breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="" routerLink="/">Home</a></li>
+            
+            <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+        <ol class="breadcrumb justify-content-end mt-n3">
+            <li class="breadcrumb-item"><a href="">{{username}}</a></li>
+           
+        </ol>
+    </div>
+</nav> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <!-- <li class="nav-item">
+    </li> -->
+    <div class="container">
+        <a class="navbar-brand" href="" routerLink="/">
+            <span>D<img src="../../assets/pics/lg.png" width="15px"  alt="">lux </span> 
+        </a>
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="my-nav" class="collapse navbar-collapse">
+            <div class="container">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Item 1 <span class="sr-only">{{username}}</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+                           <b>{{username.toUpperCase()}} <i class="fa fa-user"></i></b>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav><br><br><br>
+<div class="container">
+    <!-- executive rooms start here -->
+    <div class="excutive-box mt-5">
+        <div class=" ml-2">
+            <h2 class="executive" style="margin-top: 60px">Book Rooms</h2>
+            <div class="col-md-2 mt-n2 col-4 line"></div>
+        </div>
+        <div class="row  p-4 mt-1">
+            <div class="col-md-3 mt-2 animate__animated animate__zoomIn" *ngFor="let room of arrayOfRoom; let a = index">
+                <div class="shadow-sm bg-white">
+                    <div class="inner">
+                        <img  [src] ="url + room.image" class="card-img-top img-executive"  alt="">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text">
+                            <h4  class="text-danger">{{room.status}}</h4>
+                            <h3>Price:$30</h3>
+                            <p class="mt-n2"><b>Type: &nbsp;{{room.room_type}}</b></p>
+                        </div>
+                      <button  mat-flat-button  (click)="bookChoice(room,a)"   class="btn btn-light button-color">Book now</button>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- end here -->
+</div>

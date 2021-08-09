@@ -1,0 +1,53 @@
+
+ h1, h2, h3, h4, h5, h6 {
+    font-family: "Satisfy", sans-serif;
+  }
+
+.input-full-width {
+    width: 100%;
+  }
+  .text-login{
+      font-weight: 600;
+      font-size: 20px;
+  }
+  .logo h1 {
+    font-size: 28px;
+    margin: 0;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 3px;
+  }
+  .logo h1 a, .logo h1 a:hover {
+    color: #ffb30b;
+    text-decoration: none;
+  }
+  ::ng mat-form-field{
+      text-align: center;
+      background-color: black;
+  }
+  .nav-lin{
+    font-family: "arial";
+    color: #ffb30b;
+    font-style: italic;
+  }
+  .con {
+    position: relative;
+  }
+  
+  .child {
+    /* width: 50px; */
+    /* height: 50px; */
+    /* background-color: red; */
+    /* Center vertically and horizontally */
+    position: absolute;
+    margin-top: 10%;
+    /* margin-left: ; */
+    /* margin-top: auto; */
+    margin-left: auto;
+    margin-right: auto
+    /* left: 0%; */
+    /* margin: -25px 0 0 -25px;  */
+  }
+  .error{
+    font-weight: 600;
+  }

@@ -1,0 +1,53 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Satisfy", sans-serif;
+  }
+
+.input-full-width {
+    width: 100%;
+}
+  .logo h1 {
+    font-size: 35px;
+    margin: 0;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+  .logo h1 a, .logo h1 a:hover {
+    color: #ffb30b;
+    text-decoration: none;
+}
+  .example-full-width {
+    width: 100%;
+}
+  .box-check{
+    background-color: inherit;
+}
+  .room-disc{
+    font-family:  "Poppins", sans-serif;
+    text-align: justify;
+}
+  /* image */
+.inner{
+    overflow: hidden;
+}
+.inner img{
+    /* transition: all 1.5s ease-in; */
+    transition: all ease-in 0.2s;
+}
+.inner:hover img{
+    transform: scale(1.1);
+}
+/* customising of date input */
+::ng-deep .mat-form-field-underline{
+ background-color: #ffb30b !important;
+}
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #ffb30b;
+}
+::ng-deep .mat-ripple .mat-button-ripple .mat-button-ripple-round{
+  background-color: #ffb30b;
+}
+::ng-deep .mat-focus-indicator.cdk-focused.cdk-program-focused{
+  background-color: #ffb30b;
+}
+/* for the rows and col */

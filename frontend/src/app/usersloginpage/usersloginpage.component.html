@@ -1,0 +1,61 @@
+<!-- <button mat-button color="accent">f8gge</button> -->
+
+<h4 class="text-light">kkk</h4>
+<p class="text-light">login page</p>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="row justify-content-center mx-auto con">
+                <div class="col-md-6 child">
+                    <mat-card class="mat-card-login">
+                        <div class="text-center mt-3 text-login">
+                            <!-- <img width="50px" src="../../assets/pics/lg.png" alt=""> -->
+                            <div class="logo mr-auto">
+                                <h1 class="text-light"><a href="index.html">  <span>D<img src="../../assets/pics/lg.png" width="35px"  alt="">lux </span></a></h1>
+                            </div>
+                        </div>
+                        <mat-card-content>
+                            <div class="error text-center text-danger mt-3" *ngIf="errormessage">{{errormessage}}</div>                                
+                            <form action="" [formGroup]="loginUserForm" (ngSubmit)="checkLogin()" class="example-form mt-2">
+                                <mat-form-field class="input-full-width" color="accent">
+                                    <!-- <mat-icon matSuffix>phone</mat-icon> -->
+                                    <mat-label>
+                                        <mat-icon class="mat-icon" aria-hidden="false" aria-label="Example home icon" color="accent">email</mat-icon>
+                                        email
+                                    </mat-label>
+                                    <input  type="text" formControlName="email" matInput placeholder="Email" required>
+                                    <mat-error *ngIf="userEmail.invalid">
+                                        <span *ngIf="userEmail.errors.required">email is <strong>required</strong> </span>
+                                        <span *ngIf="userEmail.errors.email">valid email is <strong>required</strong></span>
+                                    </mat-error>
+                                </mat-form-field><br><br>
+                                <mat-form-field class="input-full-width" color="accent">
+                                    <mat-label>
+                                        <i class="fa fa-lock text-warning" aria-hidden="true"></i>
+                                        password
+                                    </mat-label>
+                                    <input type="password" formControlName="password" matInput placeholder="password" required>
+                                    <mat-error *ngIf="userPass.invalid">
+                                        <span>Password is <strong>required</strong></span>
+                                    </mat-error>
+                                </mat-form-field>
+                                <mat-card-actions>
+                                    <div class="mt-3 text-center">
+                                        <button mat-flat-button style="background-color: #ffb30b;" class="text-white mb-1">Login</button>
+                                    </div>
+                                </mat-card-actions>
+                            </form>
+                        </mat-card-content>
+                    </mat-card>
+                    <mat-card class="mt-3">
+                        <mat-card-content>
+                            <div class="text-center">
+                                <a href="" routerLink="/signup" class="mt-n3 nav-lin">Create an account</a>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

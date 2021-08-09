@@ -1,0 +1,40 @@
+/* none */
+.none{
+    color: inherit;
+}
+.container{
+    margin-top: 80px !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Satisfy", sans-serif;
+  }
+.admin-card-login{
+    box-shadow: none !important;
+    max-height: 60vh;
+}
+.logo h1 {
+    font-size: 30px;
+    margin: 0;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 3px;
+  }
+  .logo h1 a, .logo h1 a:hover {
+    color: #ffb30b;
+    text-decoration: none;
+  }
+  /* for input */
+  .input-full-width{
+      width: 100%;
+  }
+  ::ng-deep .mat-icon{
+        font-size: 15px !important;
+  }
+  ::ng-deep .mat-icon2{
+    font-size: 25px !important;
+}
+.error{
+  color: red;
+  font-weight: 600;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

@@ -1,0 +1,47 @@
+.box-edit{
+    /* margin: auto !important; */
+    margin-top: 5px
+}
+.view-order{
+    font-size: 25px;
+    color: #545459;
+    padding: 12px;
+}
+.form-control{
+    box-shadow: none;
+}
+.card-tilte{
+    font-weight: 700;
+}
+.btn-pay{
+    border-radius: 0px;
+    background-color: #D04141;
+    color: white;
+    box-shadow: 2px 3px 4px black;
+    border: none !important;
+    /* padding: 8px 8px 8px; */
+    /* font-weight: 700; */
+}
+.btn-pay:hover{
+    background-color: brown;
+}
+.btn:focus{
+    border: none !important;
+}
+
+@media (max-width: 600px) {
+    .box-edit {
+        /* background-color: lightblue; */
+        margin: 2px;
+        margin-top: 40px;
+    }
+    .text-light{
+        display: none;
+    }
+    .due-price{
+        display: none;
+    }
+    .view-order{
+        font-size: 15px;
+    }
+}

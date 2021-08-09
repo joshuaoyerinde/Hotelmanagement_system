@@ -1,0 +1,32 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Satisfy", sans-serif;
+  }
+
+.input-full-width {
+    width: 100%;
+  }
+  .logo h1 {
+    font-size: 28px;
+    margin: 0;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 3px;
+  }
+  .logo h1 a, .logo h1 a:hover {
+    color: #ffb30b;
+    text-decoration: none;
+  }
+  ::ng-deep .input-full-width
+  {
+   
+    border-botto:2px solid black !important;
+  }
+  .btn-sign{
+      border-radius: none !important;
+      /* border-radius: none; */
+      background-color: #ffb30b;
+
+  }
+  ::ng-deep .mat-card{
+    /* box-shadow: none !important; */
+  }

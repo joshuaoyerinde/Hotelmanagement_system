@@ -1,0 +1,60 @@
+<!-- <p>staff-login works!</p> -->
+<!-- ////////////none -->
+<h2 class="text-light">adminlogin works!</h2>
+<h2 class="text-light">adminlogin works!</h2>
+<!-- ///////////none -->
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-6 col-md-6 col-sm-7">
+                <!-- <mat-progress-bar class="mat-progress-bar" *ngIf="spinner" color="accent" mode="indeterminate"></mat-progress-bar> -->
+                <mat-card class="admin-card-login">
+                    <div class="text-center logo mr-auto">
+                        <h1 class="text-light"><a href="index.html">  <span>D<img src="../../assets/pics/lg.png" width="35px"  alt="">lux </span></a></h1>
+                    </div>
+                    <mat-card-header>
+                      
+                    </mat-card-header>
+                    <div class="error text-center mt-3" *ngIf="errormsg" >{{errormsg}}</div>
+                    <mat-card-content>
+                        <form action="" [formGroup]="staffLoginForm" novalidate (ngSubmit)="staffSignin()">
+                            <div class="row justify-content-center mx-auto">
+                                <div class="col-md-12 mt-3">
+                                    <mat-form-field class="input-full-width" color="accent">
+                                        <mat-label>
+                                            <mat-icon class="mat-icon" aria-hidden="false" aria-label="Example home icon" color="accent">email</mat-icon>
+                                            Email
+                                        </mat-label>
+                                        <input type="text" formControlName="email" matInput placeholder="Email" required>
+                                        <!-- <mat-error > -->
+                                            <span *ngIf="email.invalid && email.dirty">email is <strong>required</strong></span>
+                                        <!-- </mat-error> -->
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-12 mt-3">
+                                    <mat-form-field class="input-full-width" color="accent">
+                                        <mat-label> 
+                                            <mat-icon class="mat-icon" aria-hidden="false" aria-label="Example home icon" color="accent">no_encryption</mat-icon>
+                                            Password
+                                        </mat-label>
+                                        <input type="text" [type]="hide ?'password':'text'" formControlName="password" matInput placeholder="password" required>
+                                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.arial-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                            <mat-icon class="mat-icon2">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                        </button>
+                                        <span class="text-danger" *ngIf="pass.invalid">Password is <strong>required</strong></span>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <mat-card-actions>
+                                <div class="text-center mt-3">
+                                    <button [disabled]="staffLoginForm.invalid" mat-flat-button class="text-white col-md-3 col-4 mb-1 mt-2" style="background-color: #ffb30b">Login</button>
+                                </div>
+                            </mat-card-actions>
+                        </form>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
